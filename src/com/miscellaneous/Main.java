@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 //        Multiplystrings ms = new Multiplystrings();
-
-        System.out.println(LargetsPrime.largestPrimeFactor(69875));
+         FIndMaxConsecutives fm = new FIndMaxConsecutives();
+        System.out.println(fm.findMaxConsecutiveOnes(new int[]{1}));
     }
 }
