@@ -25,4 +25,3 @@ public class SubArraysWithSumK {
         return count;
     }
     }
-}

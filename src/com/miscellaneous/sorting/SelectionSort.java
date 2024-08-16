@@ -1,4 +1,4 @@
-package com.miscellaneous;
+package com.miscellaneous.sorting;
 
 public class SelectionSort {
     void selectionSort(int a[], int n)
