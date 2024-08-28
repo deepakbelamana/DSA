@@ -1,6 +1,7 @@
-package com.miscellaneous;
+package com.miscellaneous.Main;
 
 import com.miscellaneous.Arrays.BestTimeToBuyAndSellStocks;
+import com.miscellaneous.Arrays.MergeIntervals;
 import com.miscellaneous.Arrays.MinimumSum;
 import com.miscellaneous.Arrays.SortArrayWithSquares;
 import com.miscellaneous.sorting.CheckSortedAndRotated;
@@ -12,7 +13,7 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(MinimumSum.solve(new int[]{6, 8, 4, 5, 2, 3},6));
+        System.out.println(MergeIntervals.merge(new int[][]{{1,3},{2,6},{8,10},{15,18}}));
 
     }
 }
