@@ -4,37 +4,26 @@ import java.util.Arrays;
 
 public class MissingAndRepeating {
     public static int[] findTwoElement(int a[], int n) {
-        Arrays.sort(a);
-        // boolean repf=false;
-        // int rep=0;
-        // int min=Integer.MAX_VALUE;
-        // for(int i=0;i<n-1;i++){
-        //     if(a[i]!=a[i+1]){
-        //         if(a[i+1]-a[i]>1){
-        //             min=Math.min(min,a[i]+1);
-        //         }
-        //         if(a[i]==a[i+1] && !repf){
-        //             repf=true;
-        //             rep=a[i];
-        //         }
-        //     }
-        // }
+        int[] refa=new int[n];
+        int[]  res = new int[2];
+        for(int i=0;i<n;i++){
+            if(refa[a[i]-1]==0){
+                refa[a[i]-1]=1;
+            }else if(refa[a[i]-1]==1){
+                refa[a[i]-1]+=1;
+            }
+        }
+        int mis=0;
         int rep=0;
-        for(int i=0;i<n-1;i++){
-            if(a[i]==a[i+1]){
-                rep=a[i];
-                break;
+        for(int i=0;i<n;i++){
+            if(refa[i]==0){
+                mis=i+1;
+            } else if(refa[i]>1){
+                rep=i+1;
             }
         }
-        int min=0;
-        int k=1;
-        for(int i=0;i<n-1;i++,k++){
-            if(a[i]!=k){
-                min=k;
-                break;
-            }
-        }
-        int[] res=new int[]{rep,min};
+        res[0]=rep;
+        res[1]=mis;
         return res;
     }
 }
