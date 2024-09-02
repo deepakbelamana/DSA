@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(FourSum.fourSum(new int[]{1000000000,1000000000,1000000000,1000000000},-294967296));
+        System.out.println(SubarrayProductLessThanK.countSubArrayProductLessThanK(new long[]{1, 9, 2, 8, 6, 4, 3},7,100));
 
     }
 }
