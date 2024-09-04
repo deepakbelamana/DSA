@@ -1,29 +1,21 @@
 package com.miscellaneous.Arrays;
 
 public class SubarrayProductLessThanK {
-    public static long countSubArrayProductLessThanK(long a[], int n, long k)
+    public static long countSubArrayProductLessThanK(long nums[], int n, long k)
     {
-        long i=0;
-        long j=0;
-        long p=1;
-        long c=0;
-        while(i<n){
-            if(j>=n){
-                i++;
-                j=i;
-                p=1;
-            }else {
-                p *= a[(int) j];
-                if (p < k) {
-                    c++;
-                    j++;
-                } else {
-                    p = 1;
-                    i++;
-                    j = i;
-                }
+        long left=0;
+        long right=0;
+        long product=1;
+        long count=0;
+        while(right<n){
+            product*=nums[(int)right];
+            while(left<=right && product>=k){
+                product/=nums[(int)left];
+                left++;
             }
+            count+=(right-left+1);
+            right++;
         }
-        return c;
+        return count;
     }
 }
