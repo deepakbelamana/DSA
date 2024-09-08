@@ -21,4 +21,4 @@ def max_of_subarrays(nums, n, k):
 
 
 if __name__ == '__main__':
-    print(max_of_subarrays([8,7,6,9], 4, 2))
+    print(max_of_subarrays([1,3,-1,-3,5,3,6,7], 8, 3))
