@@ -1,6 +1,7 @@
 package com.miscellaneous.Main;
 
 import com.miscellaneous.Arrays.*;
+import com.miscellaneous.BinarySearch.CapacityToShipPackagesWithinDdays;
 import com.miscellaneous.BinarySearch.SearchInTwoDArr;
 import com.miscellaneous.BinarySearch.SingleElementInSortedArray;
 import com.miscellaneous.sorting.CheckSortedAndRotated;
@@ -12,11 +13,7 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(SearchInTwoDArr.searchMatrix(new int[][]{
-                {1,3,5,7},
-                {10,11,16,20},
-                {23,30,34,60}
-        },13));
+        System.out.println(CapacityToShipPackagesWithinDdays.shipWithinDays(new int[]{1,2,3,4,5,6,7,8,9,10},5));
 
     }
 }
